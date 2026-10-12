@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Feedback | Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="layout">
+    <!-- Left: brand panel -->
+    <section class="brand" aria-hidden="true">
+      <h1>Your voice<br>shapes your classes.</h1>
+      <p>Rate courses, share ideas, and help teachers improve.</p>
+      <div class="stars">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span class="dim">★</span>
+      </div>
+    </section>
+
+    <!-- Right: login form -->
+    <section class="panel">
+      <form id="loginForm" novalidate>
+        <h2>Student login</h2>
+        <p class="sub">Sign in to submit your feedback.</p>
+
+        <div class="field">
+          <label for="username">Username or student ID</label>
+          <input type="text" id="username" name="username" autocomplete="username" placeholder="e.g. STU2024001">
+          <small class="error" id="usernameError"></small>
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <div class="pw-wrap">
+            <input type="password" id="password" name="password" autocomplete="current-password" placeholder="Enter your password">
+            <button type="button" id="togglePw" aria-label="Show password">Show</button>
+          </div>
+          <small class="error" id="passwordError"></small>
+        </div>
+
+        <div class="row">
+          <label class="check"><input type="checkbox" id="remember"> Remember me</label>
+          <a href="#" id="forgot">Forgot password?</a>
+        </div>
+
+        <p class="message" id="formMessage" role="alert"></p>
+
+        <button type="submit" class="btn" id="submitBtn">Log in</button>
+
+        <p class="hint">Demo login: <b>student1</b> / <b>feedback123</b></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
